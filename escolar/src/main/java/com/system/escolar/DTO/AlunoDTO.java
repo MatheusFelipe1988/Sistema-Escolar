@@ -1,14 +1,11 @@
 package com.system.escolar.DTO;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.system.escolar.domain.Aluno;
+import com.system.escolar.domain.EscolaType;
 
-@Getter
-@Setter
-public class AlunoDTO {
-    private Long id;
-    private String nome;
-    private String sobreNome;
-    private String cpf;
-    private double boletim;
+import java.math.BigDecimal;
+
+public record AlunoDTO (String nome, String sobreNome, String matricula, String cpf, BigDecimal boletim, EscolaType escolaType){
+
+
 }

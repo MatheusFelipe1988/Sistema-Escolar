@@ -3,6 +3,8 @@ package com.system.escolar.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -17,6 +19,7 @@ public class Professor {
     private String nome;
     private String sobreNome;
     private String cpf;
+    private BigDecimal notaProva;
     @ManyToOne
     @JoinColumn(name = "notaAluno_id")
     private Aluno notaAluno;
